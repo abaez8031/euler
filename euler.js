@@ -13,7 +13,7 @@ const sumMultiples = (num) => {
   return sum
 }
 
-console.log(sumMultiples(1000))
+// console.log(sumMultiples(1000))
 
 const evenFibonacciNumbers = () => {
   let fibs = [1,2]
@@ -31,4 +31,12 @@ const evenFibonacciNumbers = () => {
   return sum
 }
 
-console.log(evenFibonacciNumbers())
+// console.log(evenFibonacciNumbers())
+
+const isPrime = (num) => {
+  if (num < 2) return false;
+  for(let i = 2; i < Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
