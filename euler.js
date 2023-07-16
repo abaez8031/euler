@@ -14,3 +14,21 @@ const sumMultiples = (num) => {
 }
 
 console.log(sumMultiples(1000))
+
+const evenFibonacciNumbers = () => {
+  let fibs = [1,2]
+  let newTerm;
+  let sum = 0
+  while (!newTerm || newTerm < 4000000) {
+    newTerm = fibs[fibs.length - 1] + fibs[fibs.length - 2];
+    fibs.push(newTerm)
+  }
+  for(let i = 0; i < fibs.length; i++) {
+    if(fibs[i] % 2 === 0) {
+      sum += fibs[i]
+    }
+  }
+  return sum
+}
+
+console.log(evenFibonacciNumbers())
