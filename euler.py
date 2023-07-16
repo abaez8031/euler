@@ -1,13 +1,15 @@
-def sumMultiples(num):
+import math
+
+def sum_multiples(num):
     sum = 0
     for i in range(1,num):
         if i % 3 == 0 or i % 5 == 0:
             sum += i
     return sum
 
-print(sumMultiples(1000))
+print(sum_multiples(1000))
 
-def evenFibNumbers():
+def even_fib_numbers():
     sum = 0
     fibs = [1,2]
     newTerm = fibs[-1] + fibs[-2]
@@ -19,4 +21,6 @@ def evenFibNumbers():
             sum += num
     return sum
 
-print(evenFibNumbers())
+print(even_fib_numbers())
+
+# What is the largest prime factor of the number 600851475143
