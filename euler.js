@@ -40,3 +40,7 @@ const isPrime = (num) => {
   }
   return true;
 }
+
+const largestPrimeFactor = (num) => {
+
+}
