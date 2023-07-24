@@ -66,19 +66,19 @@
 
 // console.log(largestPrimeFactor(600851475143));
 
-const largestPalindromeProduct = () => {
-  let largest = 0
-  for(let i = 100; i < 1000; i++) {
-    for(let j = 100; j < 1000; j++) {
-      let product = i * j
-      let productString = product.toString()
-      let productLength = product.toString().length
-      if(product > largest && productString.slice(0,productLength / 2) === productString.slice(productLength / 2).split("").reverse().join("")) {
-        largest = product;
-      }
-    }
-  }
-  return largest
-}
+// const largestPalindromeProduct = () => {
+//   let largest = 0
+//   for(let i = 100; i < 1000; i++) {
+//     for(let j = 100; j < 1000; j++) {
+//       let product = i * j
+//       let productString = product.toString()
+//       let productLength = product.toString().length
+//       if(product > largest && productString.slice(0,productLength / 2) === productString.slice(productLength / 2).split("").reverse().join("")) {
+//         largest = product;
+//       }
+//     }
+//   }
+//   return largest
+// }
 
-console.log(largestPalindromeProduct())
+// console.log(largestPalindromeProduct())
