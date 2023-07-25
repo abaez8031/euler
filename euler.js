@@ -101,3 +101,12 @@
 // }
 
 // console.log(countingPairs([1,2], 0))
+
+const isHappy = (num) => {
+  let digits = num.toString().split("")
+    for(let i = 0; i < digits.length; i++) {
+        num += parseInt(digits[i]) ** 2
+    }
+};
+
+isHappy(19)
