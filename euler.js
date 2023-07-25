@@ -82,3 +82,22 @@
 // }
 
 // console.log(largestPalindromeProduct())
+
+// const countingPairs = (nums, k) => {
+//   let counter = 0;
+//   let count = {};
+  
+//   for(let i = 0; i < nums.length; i++) {
+//     let a = nums[i]
+//     for(let j = 0; j < nums.length; j++) {
+//       let b = nums[j]
+//       if(a + k === b && !count[a]) {
+//         count[a] = b
+//         counter++
+//       }
+//     }
+//   }
+//   return counter
+// }
+
+// console.log(countingPairs([1,2], 0))
