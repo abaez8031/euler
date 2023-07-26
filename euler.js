@@ -102,31 +102,52 @@
 
 // console.log(countingPairs([1,2], 0))
 
-const isHappy = (num) => {
-  let digits = num.toString().split("")
-    for(let i = 0; i < digits.length; i++) {
-        num += parseInt(digits[i]) ** 2
-    }
-};
+// const isHappy = (num) => {
+//   let digits = num.toString().split("")
+//     for(let i = 0; i < digits.length; i++) {
+//         num += parseInt(digits[i]) ** 2
+//     }
+// };
 
-isHappy(19)
+// isHappy(19)
 
-const range = (start,end, step = 1) => {
-  let arr = [];
-  if(start < end) {
-    for(let i = start; i <= end; i+= step) {
-  		arr.push(i)
-  	}
+// const range = (start,end, step = 1) => {
+//   let arr = [];
+//   if(start < end) {
+//     for(let i = start; i <= end; i+= step) {
+//   		arr.push(i)
+//   	}
+//   }
+//   else {
+//   	for(let i = start; i >= end; i += step) {
+//   		arr.push(i)
+//     	}
+//     }
+//   return arr;
+// }
+
+// console.log(range(1, 10));
+// // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// console.log(range(5, 2, -1));
+// // → [5, 4, 3, 2]
+
+const arrayToList = (arr) => {
+  let list = null
+  for(let i = arr.length - 1; i >= 0; i--) {
+   	list = {value: arr[i], rest: list}
   }
-  else {
-  	for(let i = start; i >= end; i += step) {
-  		arr.push(i)
-    	}
-    }
+  return list
+}
+
+const listToArray = (list) => {
+  let arr = [];
+  let current = list
+  while (list !== null) {
+    arr.push(list.value)
+    list = list.rest
+  }
   return arr;
 }
 
-console.log(range(1, 10));
-// → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-console.log(range(5, 2, -1));
-// → [5, 4, 3, 2]
+console.log(arrayToList([10,20]))
+console.log(listToArray(arrayToList([10,20])))
