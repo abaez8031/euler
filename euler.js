@@ -86,7 +86,7 @@
 // const countingPairs = (nums, k) => {
 //   let counter = 0;
 //   let count = {};
-  
+
 //   for(let i = 0; i < nums.length; i++) {
 //     let a = nums[i]
 //     for(let j = 0; j < nums.length; j++) {
@@ -131,23 +131,67 @@
 // console.log(range(5, 2, -1));
 // // → [5, 4, 3, 2]
 
-const arrayToList = (arr) => {
-  let list = null
-  for(let i = arr.length - 1; i >= 0; i--) {
-   	list = {value: arr[i], rest: list}
+// const arrayToList = (arr) => {
+//   let list = null
+//   for(let i = arr.length - 1; i >= 0; i--) {
+//    	list = {value: arr[i], rest: list}
+//   }
+//   return list
+// }
+
+// const listToArray = (list) => {
+//   let arr = [];
+//   let current = list
+//   while (list !== null) {
+//     arr.push(list.value)
+//     list = list.rest
+//   }
+//   return arr;
+// }
+
+// console.log(arrayToList([10,20]))
+// console.log(listToArray(arrayToList([10,20])))
+
+const splitSentence = (sentence) => {
+  // Write your code here
+  let output = [];
+  let word = "";
+  sentence += " ";
+  for (let i = 0; i < sentence.length; i++) {
+    let char = sentence[i];
+    if (char !== " ") {
+      word += char;
+    } else if (char === " " || i === sentence.length - 1) {
+      output.push(word);
+      word = "";
+    }
   }
-  return list
+  return output;
+};
+
+console.log(splitSentence("The quick brown fox"));
+
+// const strFunc = (str) => {
+//   let output = "";
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+//     if (i % 2 === 0 || i % 3 === 0) {
+//       output += char;
+//     }
+//   }
+//   return output;
+// };
+
+// console.log(strFunc("When faced with a problem you do not understand, do any part of it you do understand, then look at it again. --Robert A. Heinlein").length);
+
+const numFunc = (int) => {
+  let current = int;
+  for(let i = 0; i < int; i++) {
+    current = ((current ** 2) % 99)
+  }
+  return current
 }
 
-const listToArray = (list) => {
-  let arr = [];
-  let current = list
-  while (list !== null) {
-    arr.push(list.value)
-    list = list.rest
-  }
-  return arr;
-}
-
-console.log(arrayToList([10,20]))
-console.log(listToArray(arrayToList([10,20])))
+console.log(numFunc(3))
+console.log(numFunc(5))
+console.log(numFunc(30))
