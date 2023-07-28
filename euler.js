@@ -152,24 +152,24 @@
 // console.log(arrayToList([10,20]))
 // console.log(listToArray(arrayToList([10,20])))
 
-const splitSentence = (sentence) => {
-  // Write your code here
-  let output = [];
-  let word = "";
-  sentence += " ";
-  for (let i = 0; i < sentence.length; i++) {
-    let char = sentence[i];
-    if (char !== " ") {
-      word += char;
-    } else if (char === " " || i === sentence.length - 1) {
-      output.push(word);
-      word = "";
-    }
-  }
-  return output;
-};
+// const splitSentence = (sentence) => {
+//   // Write your code here
+//   let output = [];
+//   let word = "";
+//   sentence += " ";
+//   for (let i = 0; i < sentence.length; i++) {
+//     let char = sentence[i];
+//     if (char !== " ") {
+//       word += char;
+//     } else if (char === " " || i === sentence.length - 1) {
+//       output.push(word);
+//       word = "";
+//     }
+//   }
+//   return output;
+// };
 
-console.log(splitSentence("The quick brown fox"));
+// console.log(splitSentence("The quick brown fox"));
 
 // const strFunc = (str) => {
 //   let output = "";
@@ -184,14 +184,45 @@ console.log(splitSentence("The quick brown fox"));
 
 // console.log(strFunc("When faced with a problem you do not understand, do any part of it you do understand, then look at it again. --Robert A. Heinlein").length);
 
-const numFunc = (int) => {
-  let current = int;
-  for(let i = 0; i < int; i++) {
-    current = ((current ** 2) % 99)
+// const numFunc = (int) => {
+//   let current = int;
+//   for(let i = 0; i < int; i++) {
+//     current = ((current ** 2) % 99)
+//   }
+//   return current
+// }
+
+// console.log(numFunc(3))
+// console.log(numFunc(5))
+// console.log(numFunc(30))
+
+// function makeGrid(numRows, numColumns) {
+//   let output = []
+//   for(let i = 0; i < numColumns; i++) {
+//       let subOutput = [];
+//       for(let j = 0; j < numRows; j++) {
+//           subOutput.push(i + 1)
+//       }
+//       output.push(subOutput)
+//   }
+//   return output;
+// }
+
+// console.log(makeGrid(3,4))
+
+function arrayFlattener(arr) {
+  let output = [];
+  for(let i = 0; i < arr.length; i++) {
+      if(!Array.isArray(arr[i])) {
+          output.push(arr[i])
+      }
+      else {
+          for(let j = 0; j < arr[i].length; j++) {
+              output.push(arr[i][j])
+          }
+      }
   }
-  return current
+  return output;
 }
 
-console.log(numFunc(3))
-console.log(numFunc(5))
-console.log(numFunc(30))
+console.log(arrayFlattener([1,[2, 3], 4]));
