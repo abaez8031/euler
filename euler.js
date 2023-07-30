@@ -227,13 +227,17 @@
 
 // console.log(arrayFlattener([1,[2, 3], 4]));
 
+
 function includes1To9(arr) {
   // YOUR CODE
-  let nums = [1,2,3,4,5,6,7,8,9];
+  if (arr.length !== 9) return false;
+  let fullSet = new Set([1,2,3,4,5,6,7,8,9])
   for(let i = 0; i < arr.length; i++) {
-      numsnums.splice(nums.indexOf(arr[i]), 1)
+      let num = arr[i]
+      if (!fullSet.has(num)) return false;
+      fullSet.delete(num)
   }
-  return nums.length === 0
+  return fullSet.size === 0;
 }
 
 console.log(includes1To9([1,2,3,4,5,6,7,8,9])) // => true
