@@ -210,19 +210,31 @@
 
 // console.log(makeGrid(3,4))
 
-function arrayFlattener(arr) {
-  let output = [];
+// function arrayFlattener(arr) {
+//   let output = [];
+//   for(let i = 0; i < arr.length; i++) {
+//       if(!Array.isArray(arr[i])) {
+//           output.push(arr[i])
+//       }
+//       else {
+//           for(let j = 0; j < arr[i].length; j++) {
+//               output.push(arr[i][j])
+//           }
+//       }
+//   }
+//   return output;
+// }
+
+// console.log(arrayFlattener([1,[2, 3], 4]));
+
+function includes1To9(arr) {
+  // YOUR CODE
+  let nums = [1,2,3,4,5,6,7,8,9];
   for(let i = 0; i < arr.length; i++) {
-      if(!Array.isArray(arr[i])) {
-          output.push(arr[i])
-      }
-      else {
-          for(let j = 0; j < arr[i].length; j++) {
-              output.push(arr[i][j])
-          }
-      }
+      numsnums.splice(nums.indexOf(arr[i]), 1)
   }
-  return output;
+  return nums.length === 0
 }
 
-console.log(arrayFlattener([1,[2, 3], 4]));
+console.log(includes1To9([1,2,3,4,5,6,7,8,9])) // => true
+console.log(includes1To9([1,1,2,3,4,5,6,7,8])) // => false (no 9)
