@@ -227,18 +227,107 @@
 
 // console.log(arrayFlattener([1,[2, 3], 4]));
 
-
-function includes1To9(arr) {
+function getRow(puzzle, row) {
   // YOUR CODE
-  if (arr.length !== 9) return false;
-  let fullSet = new Set([1,2,3,4,5,6,7,8,9])
-  for(let i = 0; i < arr.length; i++) {
-      let num = arr[i]
-      if (!fullSet.has(num)) return false;
-      fullSet.delete(num)
-  }
-  return fullSet.size === 0;
+  return puzzle[row];
 }
 
-console.log(includes1To9([1,2,3,4,5,6,7,8,9])) // => true
-console.log(includes1To9([1,1,2,3,4,5,6,7,8])) // => false (no 9)
+function getColumn(puzzle, col) {
+  // YOUR CODE
+  let output = [];
+  for(let i = 0; i < puzzle.length; i++) {
+      output.push(puzzle[i][col])
+  }
+  return output;
+}
+
+
+function getSection(puzzle, x, y) {
+  // YOUR CODE
+  let output = [];
+  for(let i = y; i < y + 3; i++) {
+      for(let j = x; j < x + 3; j++) {
+          output.push(puzzle[i][j])
+      }
+  }
+  return output;
+}
+
+let puzzle = [[ 8,9,5,   7,4,2,   1,3,6 ],
+              [ 2,7,1,   9,6,3,   4,8,5 ],
+              [ 4,6,3,   5,8,1,   7,9,2 ],
+
+              [ 9,3,4,   6,1,7,   2,5,8 ],
+              [ 5,1,7,   2,3,8,   9,6,4 ],
+              [ 6,8,2,   4,5,9,   3,7,1 ],
+
+              [ 1,5,9,   8,7,4,   6,2,3 ],
+              [ 7,4,6,   3,2,5,   8,1,9 ],
+              [ 3,2,8,   1,9,6,   5,4,7 ]];
+
+// console.log(getSection(puzzle, 0, 0));
+// // -> [ 8,9,5,2,7,1,4,6,3 ]
+
+console.log(getSection(puzzle, 1,0));
+// -> [ 7,4,2,9,6,3,5,8,1 ]
+
+// function includes1To9(arr) {
+//   // YOUR CODE
+//   if (arr.length !== 9) return false;
+//   let fullSet = new Set([1,2,3,4,5,6,7,8,9])
+//   for(let i = 0; i < arr.length; i++) {
+//       let num = arr[i]
+//       if (!fullSet.has(num)) return false;
+//       fullSet.delete(num)
+//   }
+//   return fullSet.size === 0;
+// }
+
+// console.log(includes1To9([1,2,3,4,5,6,7,8,9])) // => true
+// console.log(includes1To9([1,1,2,3,4,5,6,7,8])) // => false (no 9)
+
+// function sudokuIsValid(puzzle) {
+//   // YOUR CODE
+//   for(let i = 0; i < puzzle.length; i++) {
+//       let row = getRow(puzzle,i)
+//       let col = getColumn(puzzle,i)
+//       let sect;
+//       if(i % 3 === 0) {
+//           sect = getSection(puzzle, i, i)
+//       }
+//       if(!includes1To9(row)) return false;
+//       if(!includes1To9(col)) return false;
+//       if(sect && !includes1To9(sect)) return false;
+//   }
+//   return true;
+// }
+
+// let puzzle = [[ 8,9,5,   7,4,2,   1,3,6 ],
+//               [ 2,7,1,   9,6,3,   4,8,5 ],
+//               [ 4,6,3,   5,8,1,   7,9,2 ],
+
+//               [ 9,3,4,   6,1,7,   2,5,8 ],
+//               [ 5,1,7,   2,3,8,   9,6,4 ],
+//               [ 6,8,2,   4,5,9,   3,7,1 ],
+
+//               [ 1,5,9,   8,7,4,   6,2,3 ],
+//               [ 7,4,6,   3,2,5,   8,1,9 ],
+//               [ 3,2,8,   1,9,6,   5,4,7 ]];
+
+// console.log(sudokuIsValid(puzzle));
+// // => true
+
+// let puzzleTwo = [[ 8,9,5,  7,4,2,  1,3,6 ],
+//                  [ 8,7,1,  9,6,3,  4,8,5 ],
+//                  [ 4,6,3,  5,8,1,  7,9,2 ],
+
+//                  [ 9,3,4,  6,1,7,  2,5,8 ],
+//                  [ 5,1,7,  2,3,8,  9,6,4 ],
+//                  [ 6,8,2,  4,5,9,  3,7,1 ],
+
+//                  [ 1,5,9,  8,7,4,  6,2,3 ],
+//                  [ 7,4,6,  3,2,5,  8,1,9 ],
+//                  [ 3,2,8,  1,9,6,  5,4,7 ]];
+
+// console.log(sudokuIsValid(puzzleTwo));
+// // => false
