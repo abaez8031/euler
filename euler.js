@@ -331,3 +331,9 @@ console.log(getSection(puzzle, 1,0));
 
 // console.log(sudokuIsValid(puzzleTwo));
 // // => false
+
+function maxMin(k, arr) {
+  // Write your code here
+  let sorted = arr.sort()
+  console.log(sorted)
+}
