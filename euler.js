@@ -336,7 +336,6 @@ function maxMin(k, arr) {
   // Write your code here
   let sorted = arr.sort()
   let min = -Infinity
-  console.log(sorted)
   for(let i = 0; i < arr.length; i++) {
     let curr = arr[i]
     let last = arr[i +k]
