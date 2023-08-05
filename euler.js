@@ -227,48 +227,48 @@
 
 // console.log(arrayFlattener([1,[2, 3], 4]));
 
-function getRow(puzzle, row) {
-  // YOUR CODE
-  return puzzle[row];
-}
+// function getRow(puzzle, row) {
+//   // YOUR CODE
+//   return puzzle[row];
+// }
 
-function getColumn(puzzle, col) {
-  // YOUR CODE
-  let output = [];
-  for(let i = 0; i < puzzle.length; i++) {
-      output.push(puzzle[i][col])
-  }
-  return output;
-}
+// function getColumn(puzzle, col) {
+//   // YOUR CODE
+//   let output = [];
+//   for(let i = 0; i < puzzle.length; i++) {
+//       output.push(puzzle[i][col])
+//   }
+//   return output;
+// }
 
 
-function getSection(puzzle, x, y) {
-  // YOUR CODE
-  let output = [];
-  for(let i = y; i < y + 3; i++) {
-      for(let j = x; j < x + 3; j++) {
-          output.push(puzzle[i][j])
-      }
-  }
-  return output;
-}
+// function getSection(puzzle, x, y) {
+//   // YOUR CODE
+//   let output = [];
+//   for(let i = y; i < y + 3; i++) {
+//       for(let j = x; j < x + 3; j++) {
+//           output.push(puzzle[i][j])
+//       }
+//   }
+//   return output;
+// }
 
-let puzzle = [[ 8,9,5,   7,4,2,   1,3,6 ],
-              [ 2,7,1,   9,6,3,   4,8,5 ],
-              [ 4,6,3,   5,8,1,   7,9,2 ],
+// let puzzle = [[ 8,9,5,   7,4,2,   1,3,6 ],
+//               [ 2,7,1,   9,6,3,   4,8,5 ],
+//               [ 4,6,3,   5,8,1,   7,9,2 ],
 
-              [ 9,3,4,   6,1,7,   2,5,8 ],
-              [ 5,1,7,   2,3,8,   9,6,4 ],
-              [ 6,8,2,   4,5,9,   3,7,1 ],
+//               [ 9,3,4,   6,1,7,   2,5,8 ],
+//               [ 5,1,7,   2,3,8,   9,6,4 ],
+//               [ 6,8,2,   4,5,9,   3,7,1 ],
 
-              [ 1,5,9,   8,7,4,   6,2,3 ],
-              [ 7,4,6,   3,2,5,   8,1,9 ],
-              [ 3,2,8,   1,9,6,   5,4,7 ]];
+//               [ 1,5,9,   8,7,4,   6,2,3 ],
+//               [ 7,4,6,   3,2,5,   8,1,9 ],
+//               [ 3,2,8,   1,9,6,   5,4,7 ]];
 
 // console.log(getSection(puzzle, 0, 0));
 // // -> [ 8,9,5,2,7,1,4,6,3 ]
 
-console.log(getSection(puzzle, 1,0));
+// console.log(getSection(puzzle, 1,0));
 // -> [ 7,4,2,9,6,3,5,8,1 ]
 
 // function includes1To9(arr) {
@@ -332,16 +332,17 @@ console.log(getSection(puzzle, 1,0));
 // console.log(sudokuIsValid(puzzleTwo));
 // // => false
 
-function maxMin(k, arr) {
-  // Write your code here
-  let sorted = arr.sort()
-  let min = -Infinity
-  for(let i = 0; i < arr.length; i++) {
-    let curr = arr[i]
-    let last = arr[i +k]
-    if((last - curr) < min) {
-      min = last - curr
-    }
-  }
-  return min
-}
+// function maxMin(k, arr) {
+//   // Write your code here
+//   let sorted = arr.sort()
+//   let min = -Infinity
+//   for(let i = 0; i < arr.length; i++) {
+//     let curr = arr[i]
+//     let last = arr[i +k]
+//     if((last - curr) < min) {
+//       min = last - curr
+//     }
+//   }
+//   return min
+// }
+
