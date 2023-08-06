@@ -346,14 +346,36 @@
 //   return min
 // }
 
-const sumSquares = () => {
-  let squaresum = 0;
-  let sum = 0;
-  for(let i = 1; i <= 100; i++) {
-    squaresum += i * i
-    sum += i
+// const sumSquares = () => {
+//   let squaresum = 0;
+//   let sum = 0;
+//   for(let i = 1; i <= 100; i++) {
+//     squaresum += i * i
+//     sum += i
+//   }
+//   return (sum * sum) - squaresum
+// }
+
+// console.log(sumSquares())
+
+const isPrime = (num) => {
+  if (num < 2) return false;
+  for(let i = 2; i < num; i++) {
+    if(num % i === 0) return false;
   }
-  return (sum * sum) - squaresum
+  return true;
 }
 
-console.log(sumSquares())
+const nthPrime = (num) => {
+  let primes = [];
+  let i = 0
+  while (primes.length < num) {
+    if(isPrime(i)) {
+      primes.push(i)
+    }
+    i++
+  }
+  return primes[primes.length - 1]
+}
+
+console.log(nthPrime(10001));
