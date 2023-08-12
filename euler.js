@@ -426,5 +426,3 @@ const primesSummation = (num) => {
   }
   return sum
 };
-
-console.log(primesSummation(2000000))
