@@ -427,6 +427,26 @@ const largestSeries = (num) => {
 //   return sum
 // };
 
-const largestProduct = (grid) => {
-  let largest = -Infinity;
+// const largestProduct = (grid) => {
+//   let largest = -Infinity;
+//   for(let i = 0; i < 20; i++) {
+//     for(let j = 0; j < 20; j++) {
+//     }
+//   }
+// }
+
+const triangleNumbers = () => {
+  let curr = 0;
+  for(let i = 1; true; i++) {
+    let numFactors = 0;
+    curr += i;
+    for(let j = 1; j <= Math.sqrt(curr); j++) {
+      if(curr % j === 0) {
+        numFactors += 2
+      }
+    }
+    if (numFactors > 500) return curr;
+  }
 }
+
+console.log(triangleNumbers())
