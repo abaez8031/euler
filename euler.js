@@ -407,22 +407,26 @@ const largestSeries = (num) => {
 //   return null
 // }
 
-const isPrime = (num) => {
-  if (num < 2) return false;
-  for (let i = 2; i <= Math.sqrt(num); i++) {
-    if (num % i === 0) return false;
-  }
-  return true;
-};
+// const isPrime = (num) => {
+//   if (num < 2) return false;
+//   for (let i = 2; i <= Math.sqrt(num); i++) {
+//     if (num % i === 0) return false;
+//   }
+//   return true;
+// };
 
-const primesSummation = (num) => {
-  let primes = [];
-  let sum = 0;
-  for (let i = 2; i < num; i++) {
-    if (isPrime(i)) primes.push(i);
-  }
-  for (let i = 0; i < primes.length; i++) {
-    sum += primes[i];
-  }
-  return sum
-};
+// const primesSummation = (num) => {
+//   let primes = [];
+//   let sum = 0;
+//   for (let i = 2; i < num; i++) {
+//     if (isPrime(i)) primes.push(i);
+//   }
+//   for (let i = 0; i < primes.length; i++) {
+//     sum += primes[i];
+//   }
+//   return sum
+// };
+
+const largestProduct = (grid) => {
+  let largest = -Infinity;
+}
