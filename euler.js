@@ -563,7 +563,7 @@ const largestSeries = (num) => {
 // 53503534226472524250874054075591789781264330331690]
 
 const collatzSeq = () => {
-  let longestChain = 0;
+  let longest = 0;
   for(let i = 2; i < 1000000; i++) {
     let seq = [];
     let curr = i;
