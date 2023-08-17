@@ -562,16 +562,31 @@ const largestSeries = (num) => {
 // 20849603980134001723930671666823555245252804609722,
 // 53503534226472524250874054075591789781264330331690]
 
-const collatzSeq = () => {
-  let longest = 0;
-  for(let i = 2; i < 1000000; i++) {
-    let seq = [];
-    let curr = i;
-    if(curr % 2 === 0) {
-      seq.push(curr / 2)
-    }
-    else {
-      i = (i * 3) + 1
-    }
+// const collatzSeq = () => {
+//   let longest = 0;
+//   for(let i = 2; i < 1000000; i++) {
+//     let seq = [];
+//     let curr = i;
+//     if(curr % 2 === 0) {
+//       seq.push(curr / 2)
+//     }
+//     else {
+//       i = (i * 3) + 1
+//     }
+//   }
+// }
+
+const powerDigitSum = () => {
+  let power = 1;
+  let sum = 0
+  for(let i = 0; i < 1000; i++) {
+    power *= 2
   }
+  let num = BigInt(power)
+  for(let j = 0; j < num.toString().length; j++) {
+    sum += Number(num.toString()[j])
+  }
+  return sum
 }
+
+console.log(powerDigitSum())
