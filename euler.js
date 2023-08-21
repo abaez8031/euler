@@ -588,5 +588,3 @@ const powerDigitSum = () => {
   }
   return sum
 }
-
-console.log(powerDigitSum())
