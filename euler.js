@@ -576,15 +576,21 @@ const largestSeries = (num) => {
 //   }
 // }
 
-const powerDigitSum = () => {
-  let power = 1;
-  let sum = 0
-  for(let i = 0; i < 1000; i++) {
-    power *= 2
+// const powerDigitSum = () => {
+//   let power = 1;
+//   let sum = 0
+//   for(let i = 0; i < 1000; i++) {
+//     power *= 2
+//   }
+//   let num = BigInt(power)
+//   for(let j = 0; j < num.toString().length; j++) {
+//     sum += Number(num.toString()[j])
+//   }
+//   return sum
+// }
+
+const numberToWords = () => {
+  for(let i = 0; i < 100; i++) {
+    
   }
-  let num = BigInt(power)
-  for(let j = 0; j < num.toString().length; j++) {
-    sum += Number(num.toString()[j])
-  }
-  return sum
 }
