@@ -604,3 +604,13 @@ let testArr = [[75],
 [91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48],
 [63, 66, 4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31],
 [4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23]]
+
+// 1 Jan 1900 was a Monday.
+// Thirty days has September,
+// April, June and November.
+// All the rest have thirty-one,
+// Saving February alone,
+// Which has twenty-eight, rain or shine.
+// And on leap years, twenty-nine.
+// A leap year occurs on any year evenly divisible by 4, but not on a century unless it is divisible by 400.
+// How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
