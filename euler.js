@@ -614,3 +614,25 @@ let testArr = [[75],
 // And on leap years, twenty-nine.
 // A leap year occurs on any year evenly divisible by 4, but not on a century unless it is divisible by 400.
 // How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
+
+function merge_intervals(intervals) {
+  let output = [];
+  intervals.sort((a, b) => a[0] - b[0]);
+  
+  let mergedIntervals = [intervals[0]]; // Initialize with the first interval
+
+  for (let i = 1; i < intervals.length; i++) {
+      let currentInterval = intervals[i];
+      let lastMergedInterval = mergedIntervals[mergedIntervals.length - 1];
+
+      if (currentInterval[0] <= lastMergedInterval[1]) {
+          // If there's an overlap, merge the intervals by updating the end of the last merged interval
+          lastMergedInterval[1] = Math.max(lastMergedInterval[1], currentInterval[1]);
+      } else {
+          // If no overlap, add the current interval to the merged list
+          mergedIntervals.push(currentInterval);
+      }
+  }
+
+  return mergedIntervals;
+}
